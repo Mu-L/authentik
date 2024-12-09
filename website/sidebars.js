@@ -97,6 +97,7 @@ export default {
                     items: [
                         "install-config/install/docker-compose",
                         "install-config/install/kubernetes",
+                        "install-config/install/aws/index",
                     ],
                 },
                 {
@@ -648,7 +649,10 @@ export default {
                 {
                     type: "category",
                     label: "Audits and Certificates",
-                    items: ["security/audits-and-certs/2023-06-cure53"],
+                    items: [
+                        "security/audits-and-certs/2023-06-cure53",
+                        "security/audits-and-certs/2024-11-cobalt",
+                    ],
                 },
                 {
                     type: "category",
