@@ -244,7 +244,7 @@ class OAuth2Provider(WebfingerProvider, Provider):
         related_name="oauth2provider_encryption_key_set",
     )
 
-    jwks_sources = models.ManyToManyField(
+    jwt_federation_sources = models.ManyToManyField(
         OAuthSource,
         verbose_name=_(
             "Any JWT signed by the JWK of the selected source can be used to authenticate."
@@ -253,6 +253,7 @@ class OAuth2Provider(WebfingerProvider, Provider):
         default=None,
         blank=True,
     )
+    jwt_federation_providers = models.ManyToManyField("OAuth2Provider", blank=True, default=None)
 
     @cached_property
     def jwt_key(self) -> tuple[str | PrivateKeyTypes, str]:
@@ -395,7 +396,7 @@ class BaseGrantModel(models.Model):
     _scope = models.TextField(default="", verbose_name=_("Scopes"))
     auth_time = models.DateTimeField(verbose_name="Authentication time")
     session = models.ForeignKey(
-        AuthenticatedSession, null=True, on_delete=models.SET_DEFAULT, default=None
+        AuthenticatedSession, null=True, on_delete=models.CASCADE, default=None
     )
 
     class Meta:
@@ -496,6 +497,11 @@ class RefreshToken(SerializerModel, ExpiringModel, BaseGrantModel):
 
     token = models.TextField(default=generate_client_secret)
     _id_token = models.TextField(verbose_name=_("ID Token"))
+    # Shadow the `session` field from `BaseGrantModel` as we want refresh tokens to persist even
+    # when the session is terminated.
+    session = models.ForeignKey(
+        AuthenticatedSession, null=True, on_delete=models.SET_DEFAULT, default=None
+    )
 
     class Meta:
         indexes = [
