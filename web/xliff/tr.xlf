@@ -602,7 +602,7 @@
         
       </trans-unit>
       <trans-unit id="s6dfd15978586d05f">
-        <source>Welcome, <x id="0" equiv-text="${name || &quot;&quot;}"/>.</source>
+        <source>Welcome, <x id="0" equiv-text="${username || &quot;&quot;}"/>.</source>
         <target>Hoş geldiniz, <x id="0" equiv-text="${name || &quot;&quot;}"/>.</target>
         
       </trans-unit>
@@ -8620,7 +8620,6 @@ Gruplara/kullanıcılara yapılan bağlamalar, etkinliğin kullanıcısına kar�
 </trans-unit>
 <trans-unit id="s354405ae02cb262d">
   <source>Last seen: <x id="0" equiv-text="${formatElapsedTime(lastSeen)}"/> (<x id="1" equiv-text="${lastSeen.toLocaleTimeString()}"/>)</source>
-  <target>Son görülme: <x id="0" equiv-text="${getRelativeTime(lastSeen)}"/> (<x id="1" equiv-text="${lastSeen.toLocaleTimeString()}"/>)</target>
 </trans-unit>
 <trans-unit id="s5aebe06e3ddf6ca9">
   <source>Sign assertions</source>
@@ -9083,9 +9082,6 @@ Gruplara/kullanıcılara yapılan bağlamalar, etkinliğin kullanıcısına kar�
 </trans-unit>
 <trans-unit id="s931754aabd4a6a47">
   <source>Create a Policy/User/Group Binding</source>
-</trans-unit>
-<trans-unit id="s10ba15343fe64890">
-  <source>Choose A Provider</source>
 </trans-unit>
 <trans-unit id="sb7be945aa799b8d7">
   <source>Please choose a provider type before proceeding.</source>
@@ -9552,6 +9548,12 @@ Gruplara/kullanıcılara yapılan bağlamalar, etkinliğin kullanıcısına kar�
 </trans-unit>
 <trans-unit id="s79b3fcd40dd63921">
   <source>Number of previous passwords to check</source>
+</trans-unit>
+<trans-unit id="sdd66c5a2e706fb81">
+  <source>Toggle sidebar</source>
+</trans-unit>
+<trans-unit id="s7d4ec232535a36f0">
+  <source>Choose a Provider</source>
 </trans-unit>
     </body>
   </file>

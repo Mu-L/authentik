@@ -1,13 +1,24 @@
-import { AKElement } from "@goauthentik/elements/Base";
-
 import { type LitElement, type ReactiveControllerHost, type TemplateResult, nothing } from "lit";
 import "lit";
 
-export type ReactiveElementHost<T = AKElement> = Partial<ReactiveControllerHost> & T;
+/**
+ * Type utility to make readonly properties mutable.
+ */
+export type Writeable<T> = { -readonly [P in keyof T]: T[P] };
+
+/**
+ * A custom element which may be used as a host for a ReactiveController.
+ *
+ * @remarks
+ *
+ * This type is derived from an internal type in Lit.
+ */
+export type ReactiveElementHost<T> = Partial<ReactiveControllerHost & Writeable<T>> & HTMLElement;
 
 export type AbstractLitElementConstructor = abstract new (...args: never[]) => LitElement;
 
-export type LitElementConstructor = new (...args: never[]) => LitElement;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type LitElementConstructor = new (...args: any[]) => LitElement;
 
 /**
  * A constructor that has been extended with a mixin.

@@ -612,7 +612,7 @@
         
       </trans-unit>
       <trans-unit id="s6dfd15978586d05f">
-        <source>Welcome, <x id="0" equiv-text="${name || &quot;&quot;}"/>.</source>
+        <source>Welcome, <x id="0" equiv-text="${username || &quot;&quot;}"/>.</source>
         <target>Bienvenue,
         <x id="0" equiv-text="${name}"/>.</target>
         
@@ -9180,10 +9180,6 @@ Les liaisons avec les groupes/utilisateurs sont vérifiées par rapport à l'uti
   <source>Create a Policy/User/Group Binding</source>
   <target>Créer une liaison vers politique/utilisateur/groupe</target>
 </trans-unit>
-<trans-unit id="s10ba15343fe64890">
-  <source>Choose A Provider</source>
-  <target>Choisir un fournisseur</target>
-</trans-unit>
 <trans-unit id="sb7be945aa799b8d7">
   <source>Please choose a provider type before proceeding.</source>
   <target>Veuillez choisir un type de fournisseur avant de continuer.</target>
@@ -9788,18 +9784,29 @@ Les liaisons avec les groupes/utilisateurs sont vérifiées par rapport à l'uti
 </trans-unit>
 <trans-unit id="s844baf19a6c4a9b4">
   <source>Enable "Remember me on this device"</source>
+  <target>Activer "Se souvenir de moi sur cet appareil"</target>
 </trans-unit>
 <trans-unit id="sfa72bca733f40692">
   <source>When enabled, the user can save their username in a cookie, allowing them to skip directly to entering their password.</source>
+  <target>Si cette option est activée, l'utilisateur peut enregistrer son nom d'utilisateur dans un cookie, ce qui lui permet de passer directement à la saisie de son mot de passe.</target>
 </trans-unit>
 <trans-unit id="s1c336c2d6cef77b3">
   <source>Remember me on this device</source>
+  <target>Se souvenir de moi sur cet appareil</target>
 </trans-unit>
 <trans-unit id="s86cf007b861152ca">
   <source>Ensure that the user's new password is different from their previous passwords. The number of past passwords to check is configurable.</source>
+  <target>Vérifiez que le nouveau mot de passe de l'utilisateur est différent de ses mots de passe précédents. Le nombre d'anciens mots de passe à vérifier est configurable.</target>
 </trans-unit>
 <trans-unit id="s79b3fcd40dd63921">
   <source>Number of previous passwords to check</source>
+  <target>Nombre d'anciens mots de passe à vérifier</target>
+</trans-unit>
+<trans-unit id="sdd66c5a2e706fb81">
+  <source>Toggle sidebar</source>
+</trans-unit>
+<trans-unit id="s7d4ec232535a36f0">
+  <source>Choose a Provider</source>
 </trans-unit>
     </body>
   </file>

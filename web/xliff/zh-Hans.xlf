@@ -612,7 +612,7 @@
         
       </trans-unit>
       <trans-unit id="s6dfd15978586d05f">
-        <source>Welcome, <x id="0" equiv-text="${name || &quot;&quot;}"/>.</source>
+        <source>Welcome, <x id="0" equiv-text="${username || &quot;&quot;}"/>.</source>
         <target>欢迎，
         <x id="0" equiv-text="${name}"/>。</target>
         
@@ -9181,10 +9181,6 @@ Bindings to groups/users are checked against the user of the event.</source>
   <source>Create a Policy/User/Group Binding</source>
   <target>创建一个策略/用户/组绑定</target>
 </trans-unit>
-<trans-unit id="s10ba15343fe64890">
-  <source>Choose A Provider</source>
-  <target>选择提供程序</target>
-</trans-unit>
 <trans-unit id="sb7be945aa799b8d7">
   <source>Please choose a provider type before proceeding.</source>
   <target>请在继续前选择一个提供程序类型。</target>
@@ -9801,9 +9797,18 @@ Bindings to groups/users are checked against the user of the event.</source>
 </trans-unit>
 <trans-unit id="s86cf007b861152ca">
   <source>Ensure that the user's new password is different from their previous passwords. The number of past passwords to check is configurable.</source>
+  <target>确保用户的密码与之前使用的不同。可以配置检查多少个历史密码。</target>
 </trans-unit>
 <trans-unit id="s79b3fcd40dd63921">
   <source>Number of previous passwords to check</source>
+  <target>检查历史密码数量</target>
+</trans-unit>
+<trans-unit id="sdd66c5a2e706fb81">
+  <source>Toggle sidebar</source>
+  <target>切换侧边栏</target>
+</trans-unit>
+<trans-unit id="s7d4ec232535a36f0">
+  <source>Choose a Provider</source>
 </trans-unit>
     </body>
   </file>
